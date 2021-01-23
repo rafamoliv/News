@@ -4,9 +4,9 @@ export const GetClassifieds = async (dispatch) => {
   try {
     //api call
     const classifieds = [
-      { id: 1, title: "Emprego", date: "23/12", description: "50 reais por hora", url: "https://source.unsplash.com/random/200x150" },
-      { id: 2, title: "Automóveis", date: "15/12", description: "News Jornal", url: "https://source.unsplash.com/random/200x150" },
-      { id: 3, title: "Imóveis", date: "21/12", description: "Flu 1x0 Fla", url: "https://source.unsplash.com/random/200x150" },
+      { id: 1, title: "Emprego", date: "23/12", description: "50 reais por hora" },
+      { id: 2, title: "Automóveis", date: "15/12", description: "News Jornal" },
+      { id: 3, title: "Imóveis", date: "21/12", description: "Flu 1x0 Fla" },
     ];
 
     dispatch(ActionCreators.setClassifieds(classifieds));
@@ -24,7 +24,6 @@ export const NewClassified = async (dispatch, classified) => {
         title: classified.title,
         //date: classified.date,
         description: classified.description,
-        url: classified.url,
       })
     );
   } catch {

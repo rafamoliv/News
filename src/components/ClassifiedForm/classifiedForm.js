@@ -33,7 +33,6 @@ export default function ClassifiedForm({ classified, setIsEditing }) {
             title: title,
             //date: date,
             description: description,
-            url: url,
           });
         } else {
           //edit classified
@@ -42,7 +41,6 @@ export default function ClassifiedForm({ classified, setIsEditing }) {
             title: title,
             //date: date,
             description: description,
-            url: url,
           });
           setIsEditing(false);
         }
@@ -60,10 +58,6 @@ export default function ClassifiedForm({ classified, setIsEditing }) {
         <Col>
           <Form.Label>Description</Form.Label>
           <Form.Control type="textarea" rows={1} placeholder={description} onChange={(event) => setDescription(event.target.value)} />
-        </Col>
-        <Col>
-          <Form.Label>URL</Form.Label>
-          <Form.Control type="textarea" rows={1} placeholder={url} onChange={(event) => setUrl(event.target.value)} />
         </Col>
         <div style={{ marginTop: "auto" }}>
           {isNewClassified ? (
