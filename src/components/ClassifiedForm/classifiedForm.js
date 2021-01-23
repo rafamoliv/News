@@ -4,7 +4,9 @@ import { EditClassified, NewClassified, DeleteClassified } from "../../services/
 import { useDispatch } from "react-redux";
 
 export default function ClassifiedForm({ classified, setIsEditing }) {
-  const [title, setTitle] = useState("title");
+  const titles = ["Automóveis", "Emprego", "Eventos", "Imóveis"];
+
+  const [title, setTitle] = useState(titles[0]);
   const [description, setDescription] = useState("description");
   const [url, setUrl] = useState("url");
 
@@ -15,7 +17,7 @@ export default function ClassifiedForm({ classified, setIsEditing }) {
   useEffect(() => {
     if (classified !== undefined) {
       setIsNewClassified(false);
-      setDescription(classified.description);
+      setTitle(classified.title);
     } else {
       setIsNewClassified(true);
     }
@@ -49,7 +51,11 @@ export default function ClassifiedForm({ classified, setIsEditing }) {
       <Row>
         <Col>
           <Form.Label>Title</Form.Label>
-          <Form.Control type="textarea" rows={1} placeholder={title} onChange={(event) => setTitle(event.target.value)} />
+          <Form.Control as="select" onChange={(event) => setTitle(event.target.value)}>
+            {titles.map((t) => (
+              <option>{t}</option>
+            ))}
+          </Form.Control>
         </Col>
         <Col>
           <Form.Label>Description</Form.Label>
