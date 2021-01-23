@@ -14,3 +14,38 @@ export const GetClassifieds = async (dispatch) => {
     console.log("error");
   }
 };
+
+export const NewClassified = async (dispatch, classified) => {
+  try {
+    //api call
+    dispatch(
+      ActionCreators.newClassified({
+        id: 10,
+        title: classified.title,
+        //date: classified.date,
+        description: classified.description,
+        url: classified.url,
+      })
+    );
+  } catch {
+    console.log("error");
+  }
+};
+
+export const EditClassified = async (dispatch, classified) => {
+  try {
+    //api call
+    dispatch(ActionCreators.editClassified(classified));
+  } catch {
+    console.log("error");
+  }
+};
+
+export const DeleteClassified = async (dispatch, classified) => {
+  try {
+    //api call
+    dispatch(ActionCreators.deleteClassified(classified));
+  } catch {
+    console.log("error");
+  }
+};
