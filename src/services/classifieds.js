@@ -1,15 +1,12 @@
 import { ActionCreators } from "../redux/classifiedsReducer";
+import api from "./api";
 
 export const GetClassifieds = async (dispatch) => {
   try {
     //api call
-    const classifieds = [
-      { id: 1, title: "Emprego", date: "23/12", description: "50 reais por hora" },
-      { id: 2, title: "Automóveis", date: "15/12", description: "News Jornal" },
-      { id: 3, title: "Imóveis", date: "21/12", description: "Flu 1x0 Fla" },
-    ];
+    const { data } = await api.get();
 
-    dispatch(ActionCreators.setClassifieds(classifieds));
+    dispatch(ActionCreators.setClassifieds(data));
   } catch {
     console.log("error");
   }

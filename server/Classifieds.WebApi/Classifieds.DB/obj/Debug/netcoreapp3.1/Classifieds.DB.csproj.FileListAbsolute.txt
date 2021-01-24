@@ -1,0 +1,12 @@
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\bin\Debug\netcoreapp3.1\Classifieds.DB.deps.json
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\bin\Debug\netcoreapp3.1\Classifieds.DB.runtimeconfig.json
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\bin\Debug\netcoreapp3.1\Classifieds.DB.runtimeconfig.dev.json
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\bin\Debug\netcoreapp3.1\Classifieds.DB.dll
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\bin\Debug\netcoreapp3.1\Classifieds.DB.pdb
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\obj\Debug\netcoreapp3.1\Classifieds.DB.csprojAssemblyReference.cache
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\obj\Debug\netcoreapp3.1\Classifieds.DB.AssemblyInfoInputs.cache
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\obj\Debug\netcoreapp3.1\Classifieds.DB.AssemblyInfo.cs
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\obj\Debug\netcoreapp3.1\Classifieds.DB.csproj.CoreCompileInputs.cache
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\obj\Debug\netcoreapp3.1\Classifieds.DB.dll
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\obj\Debug\netcoreapp3.1\Classifieds.DB.pdb
+E:\Projetos\GitHub\news\server\Classifieds.WebApi\Classifieds.DB\obj\Debug\netcoreapp3.1\Classifieds.DB.genruntimeconfig.cache
