@@ -15,14 +15,9 @@ export const GetClassifieds = async (dispatch) => {
 export const NewClassified = async (dispatch, classified) => {
   try {
     //api call
-    dispatch(
-      ActionCreators.newClassified({
-        id: 10,
-        title: classified.title,
-        //date: classified.date,
-        description: classified.description,
-      })
-    );
+    const { data } = await api.post("", classified);
+
+    dispatch(ActionCreators.newClassified(data));
   } catch {
     console.log("error");
   }
@@ -31,6 +26,8 @@ export const NewClassified = async (dispatch, classified) => {
 export const EditClassified = async (dispatch, classified) => {
   try {
     //api call
+    await api.put("", classified);
+
     dispatch(ActionCreators.editClassified(classified));
   } catch {
     console.log("error");
@@ -40,6 +37,8 @@ export const EditClassified = async (dispatch, classified) => {
 export const DeleteClassified = async (dispatch, classified) => {
   try {
     //api call
+    await api.delete("", { data: { ...classified } });
+
     dispatch(ActionCreators.deleteClassified(classified));
   } catch {
     console.log("error");

@@ -7,8 +7,7 @@ export default function ClassifiedForm({ classified, setIsEditing }) {
   const titles = ["Automóveis", "Emprego", "Eventos", "Imóveis"];
 
   const [title, setTitle] = useState(titles[0]);
-  const [description, setDescription] = useState("description");
-  const [url, setUrl] = useState("url");
+  const [description, setDescription] = useState("Description");
 
   const [isNewClassified, setIsNewClassified] = useState(true);
 
@@ -31,7 +30,6 @@ export default function ClassifiedForm({ classified, setIsEditing }) {
           //create new classified
           NewClassified(dispatch, {
             title: title,
-            //date: date,
             description: description,
           });
         } else {
@@ -39,7 +37,6 @@ export default function ClassifiedForm({ classified, setIsEditing }) {
           EditClassified(dispatch, {
             id: classified.id,
             title: title,
-            //date: date,
             description: description,
           });
           setIsEditing(false);
