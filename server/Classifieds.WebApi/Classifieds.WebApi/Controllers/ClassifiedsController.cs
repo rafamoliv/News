@@ -34,8 +34,6 @@ namespace Classifieds.WebApi.Controllers
         {
             var newClassified = _classifiedsService.CreateClassified(classified);
 
-            //classified.Date = DateTime.Now.ToString("dd/mm/yyyy");
-
             return CreatedAtRoute("GetClassified", new { newClassified.Id }, newClassified);
         }
 

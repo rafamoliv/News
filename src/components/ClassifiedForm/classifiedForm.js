@@ -4,7 +4,7 @@ import { EditClassified, NewClassified, DeleteClassified } from "../../services/
 import { useDispatch } from "react-redux";
 
 export default function ClassifiedForm({ classified, setIsEditing }) {
-  const titles = ["Automóveis", "Emprego", "Eventos", "Imóveis"];
+  const titles = ["Automóveis", "Emprego", "Eventos", "Freelancer", "Imóveis", "Serviços"];
 
   const [title, setTitle] = useState(titles[0]);
   const [description, setDescription] = useState("Description");
