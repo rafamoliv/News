@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ClassifiedForm from "../../components/ClassifiedForm/classifiedForm";
 import ClassifiedList from "../../components/ClassifiedList/classifiedList";
-import { Container } from "../../components/ClassifiedList/styled";
+import { Container } from "./styled";
+import { Grid } from "./styled";
 
 export default function Classified() {
   return (
@@ -13,7 +14,9 @@ export default function Classified() {
         <hr style={{ border: "1px solid red" }} />
         <h3>Classified</h3>
         <Link to="/">Home</Link>
-        <ClassifiedList />
+        <Grid>
+          <ClassifiedList />
+        </Grid>
       </Container>
     </>
   );
