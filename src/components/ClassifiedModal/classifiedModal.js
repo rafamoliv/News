@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Button, Modal, Form } from "react-bootstrap";
 import { EditClassified, NewClassified, DeleteClassified } from "../../services/classifieds";
+import * as Icon from "react-bootstrap-icons";
+import { Container } from "./styled";
+import UrlOption from "../../Elements/UrlOptions/urlOption";
 
 export const NewClassifiedModal = ({ data }) => {
   const [show, setShow] = useState(false);
@@ -12,8 +15,10 @@ export const NewClassifiedModal = ({ data }) => {
   return (
     <div>
       <Button onClick={handleShow} className="btn btn-success">
+        <Icon.FolderFill />
         New Classified
       </Button>
+      <Container></Container>
       <ClassifiedModal classified={data} handleFormSubmit={NewClassified} show={show} handleClose={handleClose} />
     </div>
   );
@@ -27,15 +32,19 @@ export const EditClassifiedModal = ({ classified }) => {
 
   return (
     <div>
-      <Button onClick={handleShow} className="btn btn-warning">
-        Edit
-      </Button>
-      <ClassifiedModal classified={classified} handleFormSubmit={EditClassified} show={show} handleClose={handleClose} />
+      <Container>
+        <Button onClick={handleShow} className="btn btn-warning">
+          <Icon.PencilSquare />
+          Edit
+        </Button>
+
+        <ClassifiedModal classified={classified} handleFormSubmit={EditClassified} show={show} handleClose={handleClose} />
+      </Container>
     </div>
   );
 };
 
-const ClassifiedModal = ({ classified, setIsEditing, handleFormSubmit, show, handleClose }) => {
+const ClassifiedModal = ({ classified, show, handleClose }) => {
   const titles = ["Automóveis", "Emprego", "Eventos", "Freelancer", "Imóveis", "Serviços"];
 
   const [title, setTitle] = useState(titles[0]);
@@ -75,6 +84,7 @@ const ClassifiedModal = ({ classified, setIsEditing, handleFormSubmit, show, han
             }
           }}
         >
+          <UrlOption value={title} className="imgCard" />
           <Modal.Header closeButton>
             <Form.Label>Title</Form.Label>
             <Form.Control as="select" onChange={(event) => setTitle(event.target.value)}>
@@ -92,16 +102,22 @@ const ClassifiedModal = ({ classified, setIsEditing, handleFormSubmit, show, han
             <div style={{ marginTop: "auto" }}>
               {isNewClassified ? (
                 <Button variant="primary" type="submit" onClick={handleClose}>
+                  <Icon.FileEarmarkPlusFill />
                   Add
                 </Button>
               ) : (
                 <div>
-                  <Button variant="danger" onClick={() => DeleteClassified(dispatch, classified)}>
-                    Delete
-                  </Button>
-                  <Button variant="success" type="submit" onClick={handleClose}>
-                    Save
-                  </Button>
+                  <Container>
+                    <Button variant="danger" onClick={() => DeleteClassified(dispatch, classified)}>
+                      <Icon.TrashFill />
+                      Delete
+                    </Button>
+
+                    <Button variant="success" type="submit" onClick={handleClose}>
+                      <Icon.SaveFill />
+                      Save
+                    </Button>
+                  </Container>
                 </div>
               )}
             </div>
