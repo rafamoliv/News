@@ -11,5 +11,6 @@ export default createGlobalStyle`
 
     body {
         background: radial-gradient(#e5e5e5, #fff, #e5e5e5);
+        overflow-x: hidden;
     }
 `;

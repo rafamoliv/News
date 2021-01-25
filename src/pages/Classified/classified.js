@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ClassifiedForm from "../../components/ClassifiedForm/classifiedForm";
 import ClassifiedList from "../../components/ClassifiedList/classifiedList";
+import { NewClassifiedModal } from "../../components/ClassifiedModal/classifiedModal";
 import { Container } from "./styled";
 import { Grid } from "./styled";
 
@@ -10,7 +10,7 @@ export default function Classified() {
     <>
       <Container>
         <h3>Classificados</h3>
-        <ClassifiedForm />
+        <NewClassifiedModal />
         <hr style={{ border: "1px solid red" }} />
         <h3>Classified</h3>
         <Link to="/">Home</Link>

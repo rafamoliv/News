@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetClassifieds } from "../../services/classifieds";
 import { Container, ContainerUI } from "./styled";
-import { Button, Row, Col, Card } from "react-bootstrap";
-import ClassifiedForm from "../ClassifiedForm/classifiedForm";
+import { Button, Row, Card } from "react-bootstrap";
+import { EditClassifiedModal } from "../ClassifiedModal/classifiedModal";
 
 export default function ClassifiedList() {
   const dispatch = useDispatch();
@@ -15,15 +15,13 @@ export default function ClassifiedList() {
 
   return classifieds.map((e) => (
     <Container key={e.id}>
-      <GridRow classified={e} variant="col-md-3" />
+      <GridRow classified={e} />
       <hr />
     </Container>
   ));
 }
 
 export const GridRow = ({ classified }) => {
-  const [isEditing, setIsEditing] = useState(false);
-
   function UrlOption(props) {
     switch (props.value) {
       case "Automóveis":
@@ -61,9 +59,7 @@ export const GridRow = ({ classified }) => {
     }
   }
 
-  return isEditing ? (
-    <ClassifiedForm classified={classified} setIsEditing={setIsEditing} />
-  ) : (
+  return (
     <Row>
       <ContainerUI>
         <Card variant="col-md-3">
@@ -74,9 +70,7 @@ export const GridRow = ({ classified }) => {
             <Card.Title>{classified.title}</Card.Title>
             <Card.Text>{classified.date}</Card.Text>
             <Card.Text variant="text-secondary">{classified.description}</Card.Text>
-            <Button variant="outline-success" onClick={() => setIsEditing(!isEditing)}>
-              Go somewhere
-            </Button>
+            <EditClassifiedModal classified={classified} />
           </Card.Body>
         </Card>
       </ContainerUI>
