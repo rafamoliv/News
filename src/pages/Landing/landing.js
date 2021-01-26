@@ -1,15 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import CarouselHome from "../../components/Carousel";
 import Navbar from "../../components/Navbar";
+import { ContainerLanding, GridLanding } from "./styled";
 
 export default function Landing() {
   return (
-    <>
+    <ContainerLanding>
       <Navbar />
-      <h3>Landing</h3>
-      <Link to="/Classified">Classified</Link>
+
       <CarouselHome />
-    </>
+      <GridLanding>
+        <h3>teste</h3>
+        <h3>teste</h3>
+      </GridLanding>
+    </ContainerLanding>
   );
 }

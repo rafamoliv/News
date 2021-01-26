@@ -1,11 +1,9 @@
 import React from "react";
-import spedy from "../../assets/images/spedy.png";
-import rodev from "../../assets/images/rodev.png";
 
 export const CarouselData = [
   {
     title: "Spedy",
-    image: { spedy },
+    image: "https://raw.githubusercontent.com/rafamoliv/News/master/src/assets/images/spedy.png?token=APZTT2UID437TCFH2DW7CETACCOFA",
     description: "Challenge para estágio em Desenvolvimento Web Full Stack",
   },
   {
@@ -15,7 +13,7 @@ export const CarouselData = [
   },
   {
     title: "Rafael Oliveira",
-    image: { rodev },
+    image: "https://raw.githubusercontent.com/rafamoliv/News/master/src/assets/images/rodev.png?token=APZTT2TVYCMZNYB5AJ56ZJDACCOES",
     description: "Challenge para estágio em Desenvolvimento Web Full Stack",
   },
 ];

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const NavbarContainer = styled.div`
   *{
     justify-content: right !important;
-    z-index: 1;
+    z-index: 123;
   }
 
   .menu-bars {
