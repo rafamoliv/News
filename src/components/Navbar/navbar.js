@@ -5,8 +5,8 @@ import { SidebarData } from "./sidebarData";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { IconContext } from "react-icons";
-import newsName from "../../assets/news.png";
-import logo from "../../assets/logo.png";
+import newsName from "../../assets/images/news.png";
+import logo from "../../assets/images/logo.png";
 
 export default function Navbar() {
   const [sidebar, setSidebar] = useState(false);

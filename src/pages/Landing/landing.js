@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Carousel from "../../components/Carousel";
+import CarouselHome from "../../components/Carousel";
 import Navbar from "../../components/Navbar";
 
 export default function Landing() {
@@ -9,7 +9,7 @@ export default function Landing() {
       <Navbar />
       <h3>Landing</h3>
       <Link to="/Classified">Classified</Link>
-      <Carousel />
+      <CarouselHome />
     </>
   );
 }
