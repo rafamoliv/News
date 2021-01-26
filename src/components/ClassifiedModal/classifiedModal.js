@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Button, Modal, Form } from "react-bootstrap";
 import { EditClassified, NewClassified, DeleteClassified } from "../../services/classifieds";
-import * as Icon from "react-bootstrap-icons";
+import * as FaIcons from "react-icons/fa";
 import { Container } from "./styled";
 import UrlOption from "../../Elements/UrlOptions/urlOption";
 
@@ -15,7 +15,7 @@ export const NewClassifiedModal = ({ data }) => {
   return (
     <div>
       <Button onClick={handleShow} className="btn btn-success">
-        <Icon.FolderFill />
+        <FaIcons.FaNewspaper />
         New Classified
       </Button>
       <Container></Container>
@@ -34,7 +34,7 @@ export const EditClassifiedModal = ({ classified }) => {
     <div>
       <Container>
         <Button onClick={handleShow} className="btn btn-warning">
-          <Icon.PencilSquare />
+          <FaIcons.FaEdit />
           Edit
         </Button>
 
@@ -102,19 +102,19 @@ const ClassifiedModal = ({ classified, show, handleClose }) => {
             <div style={{ marginTop: "auto" }}>
               {isNewClassified ? (
                 <Button variant="primary" type="submit" onClick={handleClose}>
-                  <Icon.FileEarmarkPlusFill />
+                  <FaIcons.FaNewspaper />
                   Add
                 </Button>
               ) : (
                 <div>
                   <Container>
                     <Button variant="danger" onClick={() => DeleteClassified(dispatch, classified)}>
-                      <Icon.TrashFill />
+                      <FaIcons.FaTrashAlt />
                       Delete
                     </Button>
 
                     <Button variant="success" type="submit" onClick={handleClose}>
-                      <Icon.SaveFill />
+                      <FaIcons.FaSave />
                       Save
                     </Button>
                   </Container>
