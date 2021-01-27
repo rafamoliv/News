@@ -14,8 +14,8 @@ export const NavbarContainer = styled.div`
   }
 
   img.centered {
-    justify-content: center !important;
-    align-items: center !important;
+    margin: auto;
+    cursor: pointer;
   }
 
   .nav-menu {
@@ -99,6 +99,4 @@ export const NavbarToggle = styled.div`
   background-color: #060b26;
   height: 80px;
   display: flex;
-  justify-content: center !important;
-  align-items: center;
 `;

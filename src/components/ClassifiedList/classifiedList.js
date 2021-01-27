@@ -26,7 +26,7 @@ export const GridRow = ({ classified }) => {
   return (
     <Row>
       <ContainerUI>
-        <Card variant="col-md-3">
+        <Card>
           <div className="overflow">
             <UrlOption value={classified.title} className="imgCard" />
           </div>

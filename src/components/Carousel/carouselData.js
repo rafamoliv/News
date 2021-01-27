@@ -13,7 +13,7 @@ export const CarouselData = [
   },
   {
     title: "Rafael Oliveira",
-    image: "https://raw.githubusercontent.com/rafamoliv/News/master/src/assets/images/rodev.png?token=APZTT2TVYCMZNYB5AJ56ZJDACCOES",
+    image: "https://quarteldesign.com/quartelv3/content/uploads/2016/10/THUMBNAIL-DICAS-PROGRAMADOR.jpg",
     description: "Challenge para estágio em Desenvolvimento Web Full Stack",
   },
 ];

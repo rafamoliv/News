@@ -1,17 +1,20 @@
 import React from "react";
 import CarouselHome from "../../components/Carousel";
 import Navbar from "../../components/Navbar";
-import { ContainerLanding, GridLanding } from "./styled";
+import NewsList from "../../components/News/news";
+import { ContainerLanding, GridLanding, Grid6 } from "./styled";
 
 export default function Landing() {
   return (
     <ContainerLanding>
       <Navbar />
-
       <CarouselHome />
       <GridLanding>
-        <h3>teste</h3>
-        <h3>teste</h3>
+        <Grid6>
+          <h3>Notícias</h3>
+          <NewsList />
+        </Grid6>
+        <h3>Anuncie aqui</h3>
       </GridLanding>
     </ContainerLanding>
   );
