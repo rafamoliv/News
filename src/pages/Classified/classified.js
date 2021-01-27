@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ClassifiedList from "../../components/ClassifiedList/classifiedList";
 import { NewClassifiedModal } from "../../components/ClassifiedModal/classifiedModal";
+import Footer from "../../components/Footer/footer";
 import Navbar from "../../components/Navbar";
 import { Container } from "./styled";
 import { Grid } from "./styled";
@@ -18,6 +19,7 @@ export default function Classified() {
       <Grid>
         <ClassifiedList />
       </Grid>
+      <Footer />
     </Container>
   );
 }

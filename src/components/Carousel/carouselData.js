@@ -3,7 +3,7 @@ import React from "react";
 export const CarouselData = [
   {
     title: "Spedy",
-    image: "https://raw.githubusercontent.com/rafamoliv/News/master/src/assets/images/spedy.png?token=APZTT2UID437TCFH2DW7CETACCOFA",
+    image: "https://raw.githubusercontent.com/rafamoliv/News/master/src/assets/images/spedy.png?token=APZTT2XMRCUF7XG564KWH53ACGKDK",
     description: "Challenge para estágio em Desenvolvimento Web Full Stack",
   },
   {

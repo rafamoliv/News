@@ -5,12 +5,17 @@ export const ContainerLanding = styled.div`
   height: 100vh;
 `;
 
+export const Body = styled.div`
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  width: 90%;
+`;
+
 export const GridLanding = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grif-gap: 0;
-  width: 90%;
-  margin: auto;
 
   h3 {
     text-align: center;

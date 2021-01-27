@@ -19,9 +19,6 @@ export default function Navbar() {
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-          <Link to="/">
-            <Logo src={logo} />
-          </Link>
           <img src={newsName} className="centered" />
         </NavbarToggle>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
