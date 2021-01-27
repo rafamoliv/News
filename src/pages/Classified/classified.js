@@ -1,24 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ClassifiedList from "../../components/ClassifiedList/classifiedList";
 import { NewClassifiedModal } from "../../components/ClassifiedModal/classifiedModal";
 import Footer from "../../components/Footer/footer";
 import Navbar from "../../components/Navbar";
-import { Container } from "./styled";
-import { Grid } from "./styled";
+import { Container, BodyClassified, TitleClassified, ClassifiedBanner } from "./styled";
+import newsp from "../../assets/images/newsp.png";
 
 export default function Classified() {
   return (
     <Container>
       <Navbar />
-      <h3>Classificados</h3>
-      <NewClassifiedModal />
-      <hr style={{ border: "1px solid red" }} />
-      <h3>Classified</h3>
-      <Link to="/">Home</Link>
-      <Grid>
+
+      <TitleClassified>
+        <ClassifiedBanner>
+          <img src={newsp} />
+          <h1>Classificados</h1>
+        </ClassifiedBanner>
+
+        <NewClassifiedModal />
+      </TitleClassified>
+
+      <BodyClassified>
         <ClassifiedList />
-      </Grid>
+      </BodyClassified>
       <Footer />
     </Container>
   );

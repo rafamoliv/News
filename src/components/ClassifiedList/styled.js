@@ -4,12 +4,15 @@ export const Container = styled.div``;
 
 export const ContainerUI = styled.div`
   img {
-    height: 150px;
+    height: 105px;
   }
 
   .card {
     width: 20rem;
+    height: 400px;
+    margin-bottom: 30px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #060b26;
   }
 
   .card:hover {
@@ -22,24 +25,22 @@ export const ContainerUI = styled.div`
 
   .card-title {
     text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #060b26;
   }
 
-  .card-img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .card-text:first-child {
-    font-size: 2px;
+  span {
+    display: flex;
+    font-size: 0.7rem;
+    color: #808080;
   }
 
   .card-text {
     font-size: 0.9rem;
+    line-height: 1.2rem;
     padding: 0.4rem 1.9rem;
-  }
-
-  .container-fluid .row {
-    padding-top: 6rem;
+    color: #060b26;
   }
 
   .overflow {
@@ -53,5 +54,27 @@ export const ContainerUI = styled.div`
 
   .card-img-top:hover {
     transform: scale(1.8);
+  }
+`;
+
+export const Footer = styled.div`
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+
+  a {
+    display: flex;
+    padding: 4px;
+    cursor: pointer;
+    margin-left: 15px;
+    color: #f5ffff !important;
+    border-radius: 5px;
+    background-color: #060b26;
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: #060b26 !important;
+    border: 1px solid #060b26;
+    background-color: #f5ffff;
   }
 `;

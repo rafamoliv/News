@@ -3,7 +3,8 @@ import { useDispatch } from "react-redux";
 import { Button, Modal, Form } from "react-bootstrap";
 import { EditClassified, NewClassified, DeleteClassified } from "../../services/classifieds";
 import * as FaIcons from "react-icons/fa";
-import { Container } from "./styled";
+import * as SiIcons from "react-icons/si";
+import { ContainerEdit, NewClassifiedButton, ContainerModal, FormModal, ButtonsModal } from "./styled";
 import UrlOption from "../../Elements/UrlOptions/urlOption";
 
 export const NewClassifiedModal = ({ data }) => {
@@ -13,14 +14,13 @@ export const NewClassifiedModal = ({ data }) => {
   const handleShow = () => setShow(true);
 
   return (
-    <div>
+    <NewClassifiedButton>
       <Button onClick={handleShow} className="btn btn-success">
         <FaIcons.FaNewspaper />
-        New Classified
+        Novo Classificado
       </Button>
-      <Container></Container>
       <ClassifiedModal classified={data} handleFormSubmit={NewClassified} show={show} handleClose={handleClose} />
-    </div>
+    </NewClassifiedButton>
   );
 };
 
@@ -32,14 +32,11 @@ export const EditClassifiedModal = ({ classified }) => {
 
   return (
     <div>
-      <Container>
-        <Button onClick={handleShow} className="btn btn-warning">
-          <FaIcons.FaEdit />
-          Edit
-        </Button>
+      <ContainerEdit>
+        <FaIcons.FaEdit onClick={handleShow} />
 
         <ClassifiedModal classified={classified} handleFormSubmit={EditClassified} show={show} handleClose={handleClose} />
-      </Container>
+      </ContainerEdit>
     </div>
   );
 };
@@ -63,7 +60,7 @@ const ClassifiedModal = ({ classified, show, handleClose }) => {
   }, [classified]);
 
   return (
-    <>
+    <ContainerModal>
       <Modal show={show} onHide={handleClose} centered>
         <Form
           onSubmit={(event) => {
@@ -85,45 +82,51 @@ const ClassifiedModal = ({ classified, show, handleClose }) => {
           }}
         >
           <UrlOption value={title} className="imgCard" />
-          <Modal.Header closeButton>
-            <Form.Label>Title</Form.Label>
-            <Form.Control as="select" onChange={(event) => setTitle(event.target.value)}>
-              {titles.map((t) => (
-                <option>{t}</option>
-              ))}
-            </Form.Control>
-          </Modal.Header>
+          <Modal.Header closeButton />
 
           <Modal.Body>
-            <Form.Label>Description</Form.Label>
-            <Form.Control type="textarea" rows={3} placeholder={description} onChange={(event) => setDescription(event.target.value)} />
+            <FormModal>
+              <Form.Label>Title</Form.Label>
+              <Form.Control as="select" onChange={(event) => setTitle(event.target.value)}>
+                {titles.map((t) => (
+                  <option>{t}</option>
+                ))}
+              </Form.Control>
+            </FormModal>
+
+            <FormModal>
+              <Form.Label>Description</Form.Label>
+              <Form.Control type="textarea" rows={3} placeholder={description} onChange={(event) => setDescription(event.target.value)} />
+            </FormModal>
           </Modal.Body>
           <Modal.Footer>
             <div style={{ marginTop: "auto" }}>
               {isNewClassified ? (
-                <Button variant="primary" type="submit" onClick={handleClose}>
-                  <FaIcons.FaNewspaper />
-                  Add
-                </Button>
+                <ButtonsModal>
+                  <Button variant="primary" type="submit" onClick={handleClose}>
+                    <SiIcons.SiAddthis />
+                    Adicionar Classificado
+                  </Button>
+                </ButtonsModal>
               ) : (
                 <div>
-                  <Container>
+                  <ButtonsModal>
                     <Button variant="danger" onClick={() => DeleteClassified(dispatch, classified)}>
                       <FaIcons.FaTrashAlt />
-                      Delete
+                      Deletar
                     </Button>
 
                     <Button variant="success" type="submit" onClick={handleClose}>
                       <FaIcons.FaSave />
-                      Save
+                      Salvar
                     </Button>
-                  </Container>
+                  </ButtonsModal>
                 </div>
               )}
             </div>
           </Modal.Footer>
         </Form>
       </Modal>
-    </>
+    </ContainerModal>
   );
 };

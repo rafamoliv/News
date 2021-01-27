@@ -13,11 +13,6 @@ export const NavbarContainer = styled.div`
     justify-content: right !important;
   }
 
-  img.centered {
-    margin: auto;
-    cursor: pointer;
-  }
-
   .nav-menu {
     background-color: #060b26;
     width: 250px;
@@ -75,6 +70,10 @@ export const NavbarContainer = styled.div`
   span {
     margin-left: 16px;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const NewsImg = styled.img`
@@ -82,21 +81,13 @@ export const NewsImg = styled.img`
   align-items: center;
 `;
 
-export const Logo = styled.img`
-  background-color: #fff;
-  border-radius: 50%;
-  border: 1px solid #060b26;
-  height: 125px;
-  width: 125px;
-
-  position: fixed;
-  right: 0;
-  top: 10px;
-  margin-right: 25px;
+export const Logo = styled.div`
+  margin: auto;
+  cursor: pointer;
 `;
 
 export const NavbarToggle = styled.div`
   background-color: #060b26;
-  height: 80px;
+  height: 90px;
   display: flex;
 `;

@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetClassifieds } from "../../services/classifieds";
-import { Container, ContainerUI } from "./styled";
+import { Container, ContainerUI, Footer } from "./styled";
 import { Row, Card } from "react-bootstrap";
 import { EditClassifiedModal } from "../ClassifiedModal/classifiedModal";
 import UrlOption from "../../Elements/UrlOptions/urlOption";
+import { Link } from "react-router-dom";
 
 export default function ClassifiedList() {
   const dispatch = useDispatch();
@@ -17,7 +18,6 @@ export default function ClassifiedList() {
   return classifieds.map((e) => (
     <Container key={e.id}>
       <GridRow classified={e} />
-      <hr />
     </Container>
   ));
 }
@@ -32,10 +32,16 @@ export const GridRow = ({ classified }) => {
           </div>
           <Card.Body variant="text-dark">
             <Card.Title>{classified.title}</Card.Title>
-            <Card.Text>{classified.date}</Card.Text>
+
+            <span>Publicado em: {classified.date}</span>
+
             <Card.Text variant="text-secondary">{classified.description}</Card.Text>
-            <EditClassifiedModal classified={classified} />
           </Card.Body>
+
+          <Footer>
+            <a src="#">Veja Mais</a>
+            <EditClassifiedModal classified={classified} />
+          </Footer>
         </Card>
       </ContainerUI>
     </Row>

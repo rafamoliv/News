@@ -6,8 +6,44 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Grid = styled.div`
+export const TitleClassified = styled.div`
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 89%;
+
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  grif-gap: 0;
+
+  div {
+    margin: auto;
+  }
+`;
+
+export const ClassifiedBanner = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #060b26;
+  }
+
+  img {
+    height: 125px;
+    width: 125px;
+    margin-right: 15px;
+    transform: translateY(-10%);
+  }
+`;
+
+export const BodyClassified = styled.div`
   justify-content: center;
+  margin: auto;
+  width: 90%;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
