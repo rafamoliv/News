@@ -5,7 +5,7 @@ export const NavbarContainer = styled.div`
     justify-content: right !important;
     z-index: 123;
   }
-
+  
   .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
@@ -50,8 +50,10 @@ export const NavbarContainer = styled.div`
     border-radius: 5px;
   }
 
-  .nav-text a:hover {
-    background-color: #1a83ff;
+  .nav-text a:hover,
+  .nav-text svg:hover {
+    color: #060b26 !important;
+    background-color: #f5ffff; 
   }
 
   .nav-menu-items {
@@ -59,7 +61,7 @@ export const NavbarContainer = styled.div`
   }
 
   .navbar-toggle {
-    background-color: ##060b26;
+    background-color: #060b26;
     width 100%;
     height: 80px;
     display: flex;

@@ -72,7 +72,6 @@ export const Footer = styled.div`
   }
 
   a:hover {
-    cursor: pointer;
     color: #060b26 !important;
     border: 1px solid #060b26;
     background-color: #f5ffff;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ContainerUI, TitleCard, BodyCard } from "./styled";
+import { Container, ContainerUI, TitleCard, BodyCard, Footer } from "./styled";
 import { NewsData } from "./newsData";
 
 export default function NewsList() {
@@ -14,6 +14,9 @@ export default function NewsList() {
             <BodyCard>
               <p>{item.description}</p>
               <h6>Publicado: {item.date}</h6>
+              <Footer>
+                <a src="#">Veja Mais</a>
+              </Footer>
             </BodyCard>
           </ContainerUI>
         );
