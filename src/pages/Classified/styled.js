@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const TitleClassified = styled.div`
   margin: auto;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 20px;
   width: 89%;
 
@@ -18,6 +18,10 @@ export const TitleClassified = styled.div`
 
   div {
     margin: auto;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -33,10 +37,51 @@ export const ClassifiedBanner = styled.div`
   }
 
   img {
-    height: 125px;
-    width: 125px;
+    height: 115px;
+    width: 115px;
     margin-right: 15px;
     transform: translateY(-10%);
+  }
+
+  @media (max-width: 1440px) {
+    h1 {
+      font-size: 4rem;
+    }
+
+    img {
+      height: 95px;
+      width: 95px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 2fr 10fr;
+
+    img {
+      margin: auto;
+    }
   }
 `;
 
@@ -53,15 +98,15 @@ export const BodyClassified = styled.div`
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1280px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 520px) {
+  @media (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;

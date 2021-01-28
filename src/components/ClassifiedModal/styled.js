@@ -10,6 +10,46 @@ export const NewClassifiedButton = styled.div`
     margin-right: 15px;
     font-size: 3rem;
   }
+
+  @media (max-width: 1440px) {
+    button {
+      font-size: 1rem;
+      width: 280px;
+    }
+
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    button {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    button {
+      width: 120px;
+      font-size: 0.8rem;
+    }
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    button {
+      width: 100%;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    svg {
+      font-size: 1.5rem;
+    }
+  }
 `;
 
 export const ContainerEdit = styled.div`

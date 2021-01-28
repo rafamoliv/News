@@ -5,7 +5,6 @@ import { Container, ContainerUI, Footer } from "./styled";
 import { Row, Card } from "react-bootstrap";
 import { EditClassifiedModal } from "../ClassifiedModal/classifiedModal";
 import UrlOption from "../../Elements/UrlOptions/urlOption";
-import { Link } from "react-router-dom";
 
 export default function ClassifiedList() {
   const dispatch = useDispatch();
