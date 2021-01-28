@@ -10,6 +10,14 @@ export const Container = styled.div`
   box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.2);
   border: 1px solid #060b26;
   border-radius: 15px !important;
+
+  @media (max-width: 1024px) {
+    margin-left: 0;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const CarouselAds = styled.div`
@@ -17,6 +25,12 @@ export const CarouselAds = styled.div`
     width: 50px;
     height: 550px;
     border-radius: 15px;
+  }
+
+  @media (max-width: 500px) {
+    img {
+      height: 400px;
+    }
   }
 `;
 
@@ -42,6 +56,12 @@ export const Body = styled.div`
 
   button {
     margin-top: 50px;
+  }
+
+  @media (max-width: 500px) {
+    p {
+      display: none;
+    }
   }
 `;
 
@@ -70,5 +90,11 @@ export const Footer = styled.div`
 
   svg {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 500px) {
+    svg {
+      font-size: 5rem;
+    }
   }
 `;

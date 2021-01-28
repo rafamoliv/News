@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: #060b26;
   height: 125px;
-  margin-top: 50px;
+  margin-top: 70px;
 `;
 
 export const SocialMedias = styled.div`

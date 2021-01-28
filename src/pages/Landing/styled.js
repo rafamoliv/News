@@ -40,6 +40,51 @@ export const Business = styled.div`
   a:nth-child(3) {
     margin-right: 150px !important;
   }
+
+  @media (max-width: 1024px) {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    a:first-child {
+      margin-left: 100px !important;
+    }
+
+    a:nth-child(3) {
+      margin-right: 100px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 150px;
+      height: 150px;
+    }
+
+    a:first-child {
+      margin-left: 75px !important;
+    }
+
+    a:nth-child(3) {
+      margin-right: 75px !important;
+    }
+  }
+
+  @media (max-width: 500px) {
+    img {
+      width: 125px;
+      height: 125px;
+    }
+
+    a:first-child {
+      margin-left: 10px !important;
+    }
+
+    a:nth-child(3) {
+      margin-right: 10px !important;
+    }
+  }
 `;
 
 export const GridLanding = styled.div`
@@ -50,6 +95,24 @@ export const GridLanding = styled.div`
   h3 {
     text-align: center;
   }
+
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
-export const Grid6 = styled.div``;
+export const Grid6 = styled.div`
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+`;

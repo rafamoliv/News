@@ -13,6 +13,11 @@ export const ContainerUI = styled.div`
   box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.2);
   border: 1px solid #060b26;
   border-radius: 15px !important;
+
+  @media (max-width: 1024px) {
+    margin: 0px;
+    margin-top: 15px;
+  }
 `;
 
 export const TitleCard = styled.div`
@@ -20,6 +25,12 @@ export const TitleCard = styled.div`
     width: 100%;
     height: 175px;
     border-radius: 15px 0 0 15px;
+  }
+
+  @media (max-width: 500px) {
+    img {
+      height: 200px;
+    }
   }
 `;
 
@@ -35,6 +46,12 @@ export const BodyCard = styled.div`
     text-align: center;
     font-size: 0.8rem;
     color: #808080;
+  }
+
+  @media (max-width: 500px) {
+    p {
+      margin-top: 10px;
+    }
   }
 `;
 
@@ -55,5 +72,12 @@ export const Footer = styled.div`
     color: #060b26 !important;
     border: 1px solid #060b26;
     background-color: #f5ffff;
+  }
+
+  @media (max-width: 500px) {
+    a {
+      padding: 4px 8px;
+      margin-bottom: 10px;
+    }
   }
 `;
